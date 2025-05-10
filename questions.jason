@@ -1,0 +1,6 @@
+{
+  "topics": {
+    "Topic 1": ["What is ICT?", "List components of a computer."],
+    "Topic 2": ["Define software.", "Explain the importance of networking."]
+  }
+}
