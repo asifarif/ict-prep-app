@@ -8,6 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -25,7 +26,8 @@ jobs:
       - name: Deploy to Hugging Face Spaces
         env:
           ICT_TOKEN: ${{ secrets.ICT_TOKEN }}
-          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: |
-          git remote add space https://${{ secrets.ICT_TOKEN }}@huggingface.co/spaces/muasif/ict-exam-prep
-          git push --force space main
+          git config --global user.email "asif.arif@gmail.com"
+          git config --global user.name "asifarif"
+          git remote add space https://huggingface.co/spaces/muasif/ict-exam-prep
+          git push --force https://muasif:${ICT_TOKEN}@huggingface.co/spaces/muasif/ict-exam-prep main
