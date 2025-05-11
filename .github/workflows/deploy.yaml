@@ -23,11 +23,17 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Configure Git
+        run: |
+          git config --global user.email "asif.arif@gmail.com"
+          git config --global user.name "Dr. Muhammad Asif"
+
+      - name: Unshallow the Git repo
+        run: git fetch --unshallow
+
       - name: Deploy to Hugging Face Spaces
         env:
           ICT_TOKEN: ${{ secrets.ICT_TOKEN }}
         run: |
-          git config --global user.email "asif.arif@gmail.com"
-          git config --global user.name "asifarif"
           git remote add space https://huggingface.co/spaces/muasif/ict-exam-prep
           git push --force https://muasif:${ICT_TOKEN}@huggingface.co/spaces/muasif/ict-exam-prep main
