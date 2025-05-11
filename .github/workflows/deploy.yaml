@@ -26,5 +26,5 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.ICT_TOKEN }}
         run: |
-          git remote add space https://huggingface.co/spaces/muasif/ict-exam-prep
+          git remote add space https://huggingface.com/spaces/muasif/ict-exam-prep
           git push --force space main
