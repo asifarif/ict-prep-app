@@ -26,7 +26,7 @@ jobs:
       - name: Configure Git
         run: |
           git config --global user.email "asif.arif@gmail.com"
-          git config --global user.name "Dr. Muhammad Asif"
+          git config --global user.name "asifarif"
 
       - name: Unshallow the Git repo
         run: git fetch --unshallow
