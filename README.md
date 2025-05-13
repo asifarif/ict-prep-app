@@ -55,4 +55,4 @@ Add secret: GROQ_API_KEY
 🚀 Deployment
 Push changes to the main branch of your GitHub repository
 The GitHub Actions workflow (deploy.yml) will automatically deploy the app to your Hugging Face Space
-Access the deployed app via the Space URL (e.g., https://huggingface.co/spaces/your-username/ict-exam-prep)
+Access the deployed app via the Space URL (e.g., https://huggingface.co/spaces/asifarif/ict-exam-prep)

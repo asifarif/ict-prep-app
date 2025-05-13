@@ -23,8 +23,8 @@ def call_groq_api(prompt):
             {"role": "system", "content": "You are a concise ICT exam instructor."},
             {"role": "user", "content": prompt}
         ],
-        "temperature": 0.7,
-        "max_tokens": 180  # Limit response length for brevity
+        "temperature": 0.6,
+        "max_tokens": 200  # Limit response length for brevity
     }
 
     response = requests.post(GROQ_API_URL, json=data, headers=headers)
